@@ -4206,12 +4206,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Shelby5[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Calvin1[] = {
     {
     .iv = 64,
-    .lvl = 5,
+    .lvl = 3,
     .species = SPECIES_RATTATA,
     },
     {
     .iv = 64,
-    .lvl = 5,
+    .lvl = 4,
     .species = SPECIES_SENTRET,
     },
     {
@@ -4398,18 +4398,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Eddie[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Allen[] = {
     {
     .iv = 64,
-    .lvl = 4,
+    .lvl = 5,
     .species = SPECIES_PIDGEY,
     },
     {
     .iv = 64,
-    .lvl = 5,
-    .species = SPECIES_WINGULL,
-    },
-    {
-    .iv = 64,
     .lvl = 6,
-    .species = SPECIES_SPEAROW,
+    .species = SPECIES_WINGULL,
     }
 };
 
@@ -8166,12 +8161,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Rick[] = {
     {
     .iv = 64,
     .lvl = 4,
-    .species = SPECIES_HOPPIP,
+    .species = SPECIES_LEDYBA,
     },
     {
     .iv = 64,
     .lvl = 5,
-    .species = SPECIES_LEDYBA,
+    .species = SPECIES_SURSKIT,
     }
 };
 

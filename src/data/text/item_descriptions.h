@@ -345,12 +345,12 @@ static const u8 sFluffyTailDesc[] = _(
 // Field items
 static const u8 sSuperRepelDesc[] = _(
     "Repels weak wild\n"
-    "POKéMON for 200\n"
+    "POKéMON for 500\n"
     "steps.");
 
 static const u8 sMaxRepelDesc[] = _(
     "Repels weak wild\n"
-    "POKéMON for 250\n"
+    "POKéMON for 1000\n"
     "steps.");
 
 static const u8 sEscapeRopeDesc[] = _(
