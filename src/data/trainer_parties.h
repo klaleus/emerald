@@ -12449,3 +12449,18 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MayLinkPlaceholder[] = {
     .species = SPECIES_KYOGRE,
     }
 };
+
+static const struct TrainerMonNoItemCustomMoves sParty_Scott1[] = {
+    {
+    .iv = 128,
+    .lvl = 7,
+    .species = SPECIES_LOTAD,
+    .moves = {MOVE_ASTONISH, MOVE_GROWL, MOVE_ABSORB, MOVE_NONE}
+    },
+    {
+    .iv = 128,
+    .lvl = 9,
+    .species = SPECIES_BULBASAUR,
+    .moves = {MOVE_TACKLE, MOVE_GROWL, MOVE_LEECH_SEED, MOVE_VINE_WHIP}
+    }
+};
