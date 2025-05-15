@@ -437,10 +437,13 @@ PetalburgWoods_Text_StayOutOfTallGrass:
 	.string "of tall grass.$"
 
 PetalburgWoods_Text_HiddenItemsExplanation:
-	.string "Sometimes, there are things on the\n"
-	.string "ground even if you can't see them.\p"
-	.string "That's why I always check where I'm\n"
-	.string "walking.$"
+	.string "There used to be things on the ground\n"
+	.string "that we couldn't see.\p"
+	.string "They were all taken by an abnormally\n"
+	.string "impatient trainer many years ago.\p"
+	.string "Now we don't have to stress about\n"
+	.string "spamming the ITEMFINDER or risk\l"
+	.string "missing out on free items.$"
 
 PetalburgWoods_Text_TryUsingThisItem:
 	.string "Oh, neat!\n"
