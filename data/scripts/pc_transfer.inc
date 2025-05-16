@@ -48,3 +48,6 @@ Common_EventScript_NoMoreRoomForPokemon::
 	msgbox gText_NoMoreRoomForPokemon, MSGBOX_DEFAULT
 	release
 	end
+
+Common_EventScript_Return::
+	return

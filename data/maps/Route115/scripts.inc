@@ -143,3 +143,112 @@ Route115_Text_MeteorFallsSign:
 	.string "METEOR FALLS\n"
 	.string "FALLARBOR TOWN THROUGH HERE$"
 
+Route115_EventScript_BirchIntro::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_HOENN_STARTERS, Route115_EventScript_BirchExit
+	msgbox Route115_Text_BirchIntro, MSGBOX_DEFAULT
+	closemessage
+	specialvar VAR_RESULT, CalculatePlayerPartyCount
+	goto_if_ge VAR_RESULT, 5, Route115_EventScript_BirchFailure
+	setflag FLAG_RECEIVED_HOENN_STARTERS
+	switch VAR_STARTER_MON
+	case 0, Route115_EventScript_BirchStarterWasTreecko
+	case 1, Route115_EventScript_BirchStarterWasTorchic
+	case 2, Route115_EventScript_BirchStarterWasMudkip
+	end
+
+Route115_EventScript_BirchStarterWasTreecko::
+	call Route115_EventScript_GiveTorchic
+	call Route115_EventScript_GiveMudkip
+	goto Route115_EventScript_BirchExit
+	end
+
+Route115_EventScript_BirchStarterWasTorchic::
+	call Route115_EventScript_GiveTreecko
+	call Route115_EventScript_GiveMudkip
+	goto Route115_EventScript_BirchExit
+	end
+
+Route115_EventScript_BirchStarterWasMudkip::
+	call Route115_EventScript_GiveTreecko
+	call Route115_EventScript_GiveTorchic
+	goto Route115_EventScript_BirchExit
+	end
+
+Route115_EventScript_GiveTreecko::
+	givemon SPECIES_TREECKO, 10
+	playfanfare MUS_OBTAIN_ITEM
+	message Route115_Text_ReceiveTreecko
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_TREECKO
+	goto Route115_EventScript_Nickname
+	end
+
+Route115_EventScript_GiveTorchic::
+	givemon SPECIES_TORCHIC, 10
+	playfanfare MUS_OBTAIN_ITEM
+	message Route115_Text_ReceiveTorchic
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_TORCHIC
+	goto Route115_EventScript_Nickname
+	end
+
+Route115_EventScript_GiveMudkip::
+	givemon SPECIES_MUDKIP, 10
+	playfanfare MUS_OBTAIN_ITEM
+	message Route115_Text_ReceiveMudkip
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_MUDKIP
+	goto Route115_EventScript_Nickname
+	end
+
+Route115_EventScript_Nickname::
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Common_EventScript_Return
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	return
+
+Route115_EventScript_BirchFailure::
+	msgbox Route115_Text_BirchFailure, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+Route115_EventScript_BirchExit::
+	msgbox Route115_Text_BirchExit, MSGBOX_DEFAULT
+	closemessage
+	release
+	end
+
+Route115_Text_BirchIntro:
+	.string "Look who it is!\n"
+	.string "Nice to see you, {PLAYER}.\p"
+	.string "I'm out here doing some field work.\n"
+	.string "That's what I do best, after all!\p"
+	.string "Thanks again for saving me back on\n"
+	.string "ROUTE 101.\p"
+	.string "I want to give you the other two\n"
+	.string "POKéMON from my briefcase.$"
+
+Route115_Text_BirchFailure:
+	.string "Come back for them when you have room\n"
+	.string "for two more POKéMON in your party.$"
+
+Route115_Text_ReceiveTreecko::
+	.string "{PLAYER} received TREECKO!$"
+
+Route115_Text_ReceiveTorchic::
+	.string "{PLAYER} received TORCHIC!$"
+
+Route115_Text_ReceiveMudkip::
+	.string "{PLAYER} received MUDKIP!$"
+
+Route115_Text_BirchExit:
+	.string "Good luck filling in your POKéDEX!\n"
+	.string "Say hello to my kid for me.\p"
+	.string "(Now, what was I doing…?)$"

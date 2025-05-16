@@ -103,7 +103,7 @@ Route114_EventScript_ItemEnergyPowder::
 	end
 
 Route115_EventScript_ItemSuperPotion::
-	finditem ITEM_SUPER_POTION
+	finditem ITEM_HEART_SCALE
 	end
 
 Route115_EventScript_ItemTMFocusPunch::
@@ -315,7 +315,7 @@ MauvilleCity_EventScript_ItemXSpeed::
 	end
 
 RustboroCity_EventScript_ItemXDefend::
-	finditem ITEM_X_DEFEND
+	finditem ITEM_POKE_DOLL
 	end
 
 LilycoveCity_EventScript_ItemMaxRepel::
