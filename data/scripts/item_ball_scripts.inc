@@ -135,7 +135,7 @@ Route116_EventScript_ItemEther::
 	end
 
 Route116_EventScript_ItemRepel::
-	finditem ITEM_REPEL
+	finditem ITEM_SUPER_REPEL
 	end
 
 Route116_EventScript_ItemHPUp::
