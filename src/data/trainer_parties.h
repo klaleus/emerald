@@ -170,9 +170,14 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Declan[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntRusturfTunnel[] = {
     {
-    .iv = 0,
-    .lvl = 11,
+    .iv = 128,
+    .lvl = 18,
     .species = SPECIES_POOCHYENA,
+    },
+    {
+    .iv = 128,
+    .lvl = 20,
+    .species = SPECIES_CORPHISH,
     }
 };
 
@@ -3646,9 +3651,19 @@ static const struct TrainerMonItemCustomMoves sParty_Juan1[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Jerry1[] = {
     {
-    .iv = 10,
-    .lvl = 9,
-    .species = SPECIES_RALTS,
+    .iv = 64,
+    .lvl = 16,
+    .species = SPECIES_HOOTHOOT,
+    },
+    {
+    .iv = 64,
+    .lvl = 17,
+    .species = SPECIES_TAILLOW,
+    },
+    {
+    .iv = 64,
+    .lvl = 18,
+    .species = SPECIES_DELIBIRD,
     }
 };
 
@@ -8085,10 +8100,20 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Haley1[] = {
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Janice[] = {
     {
-    .iv = 0,
-    .lvl = 9,
-    .species = SPECIES_MARILL,
-    }
+    .iv = 64,
+    .lvl = 16,
+    .species = SPECIES_HOPPIP,
+    },
+    {
+    .iv = 64,
+    .lvl = 17,
+    .species = SPECIES_SHROOMISH,
+    },
+    {
+    .iv = 64,
+    .lvl = 18,
+    .species = SPECIES_GROVYLE,
+    },
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Vivi[] = {
@@ -9471,30 +9496,30 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Chris[] = {
 
 static const struct TrainerMonItemDefaultMoves sParty_Dawson[] = {
     {
-    .iv = 0,
-    .lvl = 8,
-    .species = SPECIES_ZIGZAGOON,
+    .iv = 64,
+    .lvl = 16,
+    .species = SPECIES_RALTS,
     .heldItem = ITEM_NUGGET
     },
     {
-    .iv = 0,
-    .lvl = 8,
-    .species = SPECIES_POOCHYENA,
+    .iv = 64,
+    .lvl = 17,
+    .species = SPECIES_DUSTOX,
     .heldItem = ITEM_NONE
     }
 };
 
 static const struct TrainerMonItemDefaultMoves sParty_Sarah[] = {
     {
-    .iv = 0,
-    .lvl = 8,
-    .species = SPECIES_LOTAD,
+    .iv = 64,
+    .lvl = 17,
+    .species = SPECIES_SENTRET,
     .heldItem = ITEM_NONE
     },
     {
-    .iv = 0,
-    .lvl = 8,
-    .species = SPECIES_ZIGZAGOON,
+    .iv = 64,
+    .lvl = 17,
+    .species = SPECIES_BEAUTIFLY,
     .heldItem = ITEM_NUGGET
     }
 };
